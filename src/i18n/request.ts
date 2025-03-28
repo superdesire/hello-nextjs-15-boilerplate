@@ -7,7 +7,8 @@ export default getRequestConfig(async () => {
   const locale = cookieStore.get('NEXT_LOCALE')?.value || 'en';
 
   return {
-    locale,
+    timeZone: 'Asia/Seoul',
+    locale: locale,
     messages: (await import(`../../messages/${locale}.json`)).default,
   };
 }); 
