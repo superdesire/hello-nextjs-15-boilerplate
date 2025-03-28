@@ -49,7 +49,7 @@ https://next-intl.dev/docs/getting-started/app-router/without-i18n-routing
 
 ## Prisma
 
-https://www.prisma.io/docs/getting-started/quickstart-sqlite
+https://authjs.dev/getting-started/adapters/prisma#configuration
 
 ```
 # local
@@ -98,6 +98,34 @@ https://pris.ly/d/getting-started
 ## Supabase
 
 https://authjs.dev/getting-started/adapters/supabase
+https://supabase.com/docs/guides/local-development/overview
+
+- 여러 프로젝트를 동시에 개발할 경우 `supabase/config.toml` 변경
+- `product_id` 변경, `port =` 로 검색해서 port 변경
+
+```bash
+❯ npx supabase init 
+Generate VS Code settings for Deno? [y/N] y
+Generated VS Code settings in .vscode/settings.json. Please install the recommended extension!
+Finished supabase init.
+```
+
+```bash
+❯ make supabase-start
+npx supabase start
+WARNING: analytics requires mounting default docker socket: /var/run/docker.sock
+Started supabase local development setup.
+
+         API URL: http://127.0.0.1:54321
+     GraphQL URL: http://127.0.0.1:54321/graphql/v1
+  S3 Storage URL: http://127.0.0.1:54321/storage/v1/s3
+          DB URL: postgresql://postgres:postgres@127.0.0.1:54322/postgres
+      Studio URL: http://127.0.0.1:54323
+    Inbucket URL: http://127.0.0.1:54324
+   S3 Access Key: 625729a08b95bf1b7ff351a663f3a23c
+   S3 Secret Key: 850181e4652dd023b7a98c58ae0d2d34bd487ee0cc3254aed6eda37307425907
+       S3 Region: local
+```
 
 ## etc
 

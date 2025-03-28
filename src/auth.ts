@@ -1,8 +1,12 @@
+import { PrismaAdapter } from "@auth/prisma-adapter";
 import NextAuth from "next-auth";
 import Google from "next-auth/providers/google";
+import { prisma } from "./lib/prisma";
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
   secret: process.env.AUTH_SECRET,
+  adapter: PrismaAdapter(prisma),
+  trustHost: true,
   providers: [
     Google({
       clientId: process.env.AUTH_GOOGLE_ID,
@@ -13,6 +17,14 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     createUser: async ({ user }) => {
       // 여기서 첫 가입 시 필요한 초기화 작업 수행
       console.log("createUser", user);
+      // 여기서 첫 가입 시 필요한 초기화 작업 수행
+    //   await prisma.user.update({
+    //     where: { id: user.id },
+    //     data: {
+    //       name: `user-${user.id}`,
+    //       displayName: user.name,
+    //     },
+    //   });
     },
   },
   pages: {
