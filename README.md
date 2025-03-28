@@ -42,3 +42,12 @@ AUTH_SECRET="<yours>" # Added by `npx auth`. Read more: https://cli.authjs.dev
 AUTH_GOOGLE_ID=<yours>
 AUTH_GOOGLE_SECRET=<yours>
 ```
+
+## etc
+
+shadcn
+next-themes
+next-intl
+zustand 5.0.3
+zod 3.24.2
+nuqs 2.4.1
