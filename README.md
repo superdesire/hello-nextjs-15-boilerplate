@@ -43,6 +43,11 @@ AUTH_GOOGLE_ID=<yours>
 AUTH_GOOGLE_SECRET=<yours>
 ```
 
+## Next Intl
+
+https://next-intl.dev/docs/getting-started/app-router/without-i18n-routing
+
+
 ## etc
 
 shadcn
