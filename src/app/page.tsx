@@ -11,16 +11,15 @@ export default function Home() {
   const session = useSession();
   return (
     <div className="p-8">
-      <Label className="text-2xl font-bold">Nextjs 15 Boilerplate</Label>
-      <Label className="text-lg font-bold">- Authjs 5</Label>
-
+      <Label className="text-4xl font-black">Nextjs 15 Boilerplate</Label>
       <Separator className="my-4" />
+      <Label className="text-2xl font-black">- Authjs 5</Label>
       {session.data ? (
         <>
-          <Label className="text-lg font-bold">
+          <Label className="text-sm font-bold">
             {session.data?.user?.name}
           </Label>
-          <Label className="text-lg font-bold">
+          <Label className="text-sm font-bold">
             {session.data?.user?.email}
           </Label>
           <SignOutButton />
@@ -29,8 +28,10 @@ export default function Home() {
         <SignInButton />
       )}
       <Separator className="my-4" />
-      <Label className="text-lg font-bold">- Next Theme</Label>
+      <Label className="text-2xl font-black">- Next Theme</Label>
       <ThemeToggle />
+      <Separator className="my-4" />
+      <Label className="text-2xl font-black">- Next Intl</Label>
     </div>
   );
 }

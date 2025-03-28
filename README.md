@@ -47,6 +47,12 @@ AUTH_GOOGLE_SECRET=<yours>
 
 https://next-intl.dev/docs/getting-started/app-router/without-i18n-routing
 
+## Supabase
+
+https://authjs.dev/getting-started/adapters/supabase
+
+
+
 
 ## etc
 
