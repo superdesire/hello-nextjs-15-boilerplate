@@ -4,7 +4,7 @@
 
 https://nextjs.org/docs/app/getting-started/installation
 
-```
+```bash
 npx create-next-app@latest
 ? What is your project named? › hello-nextjs-15-boilerplate
 
@@ -20,4 +20,25 @@ npx create-next-app@latest
 Creating a new Next.js app in /Users/raiz/labs/workspace/hello-nextjs-15-boilerplate.
 ```
 
-# hello-nextjs-15-boilerplate
+## Authjs 5
+
+https://authjs.dev/getting-started/installation?framework=pnpm
+
+```bash
+❯ pnpm add next-auth@beta
+❯ npx auth secret
+📝 Created /Users/raiz/labs/workspace/hello-nextjs-15-boilerplate/.env.local with `AUTH_SECRET`.
+
+```
+
+.env.local
+
+```
+NEXT_PUBLIC_APP_URL=http://localhost:3000
+NEXT_PUBLIC_API_URL=http://localhost:3000/api
+
+AUTH_SECRET="<yours>" # Added by `npx auth`. Read more: https://cli.authjs.dev
+
+AUTH_GOOGLE_ID=<yours>
+AUTH_GOOGLE_SECRET=<yours>
+```
