@@ -1,12 +1,59 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import { Providers } from "@/providers";
 import { getLocale, getMessages } from "next-intl/server";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const pretendard = localFont({
+  src: [
+    {
+      path: './font/PretendardStd-Thin.otf',
+      weight: '100',
+      style: 'normal',
+    },
+    {
+      path: './font/PretendardStd-ExtraLight.otf',
+      weight: '200',
+      style: 'normal',
+    },
+    {
+      path: './font/PretendardStd-Light.otf',
+      weight: '300',
+      style: 'normal',
+    },
+    {
+      path: './font/PretendardStd-Regular.otf',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: './font/PretendardStd-Medium.otf',
+      weight: '500',
+      style: 'normal',
+    },
+    {
+      path: './font/PretendardStd-SemiBold.otf',
+      weight: '600',
+      style: 'normal',
+    },
+    {
+      path: './font/PretendardStd-Bold.otf',
+      weight: '700',
+      style: 'normal',
+    },
+    {
+      path: './font/PretendardStd-ExtraBold.otf',
+      weight: '800',
+      style: 'normal',
+    },
+    {
+      path: './font/PretendardStd-Black.otf',
+      weight: '900',
+      style: 'normal',
+    },
+  ],
+  variable: '--font-pretendard',
 });
 
 const geistMono = Geist_Mono({
@@ -29,7 +76,7 @@ export default async function RootLayout({
   return (
     <html lang={locale} className="h-full" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${pretendard.variable} ${geistMono.variable} antialiased`}
       >
         <Providers messages={messages} locale={locale}>
           {children}
